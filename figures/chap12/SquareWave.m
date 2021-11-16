@@ -46,8 +46,10 @@ title('Fourier Approximations of a Square Wave');
 legend('$n = 15$', '$n = 17$', '$n = 19$')
 grid on;
 printstr = strcat('OUT/SquareWave');
+printstrGray = strcat('OUT/SquareWaveGray');
 %  exportgraphics(gca, printstr)
 print(hf,printstr,'-dpdflatex')
+print(hf,printstrGray,'-dpdflatex','-mono')
 
 
 hff=figure(2)
@@ -61,7 +63,9 @@ title('Errors in the Fourier Approximations of a Square Wave');
 legend('$n = 15$', '$n = 17$', '$n = 19$')
 grid on;
 printstr = strcat('OUT/SquareWaveError');
+printstrGray = strcat('OUT/SquareWaveErrorGray');
 %  exportgraphics(gca, printstr)
 print(hff,printstr,'-dpdflatex')
+print(hff,printstrGray,'-dpdflatex','-mono')
 
 

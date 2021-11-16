@@ -1,5 +1,5 @@
 pkg load miscellaneous
-n = 41
+n = 31
 %
 c = zeros(n,1);
 %
@@ -35,4 +35,6 @@ title(['Fourier--Legendre Expansion of Degree ', num2str(n)]);
 axis([-1.0,1.0,-0.1,1.1])
 grid on;
 printstr = strcat('OUT/FourierLegendre',num2str(n));
+printstrGray = strcat('OUT/FourierLegendre',num2str(n),'Gray');
 print(hf,printstr,'-dpdflatex')
+print(hf,printstrGray,'-dpdflatex','-mono')

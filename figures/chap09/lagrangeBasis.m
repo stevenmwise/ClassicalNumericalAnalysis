@@ -51,7 +51,8 @@ title(['Lagrange basis functions of degree ', num2str(n)]);
 %  , ...
 %      ': ', namestr, ' Nodes']);
 axis([0.0,1.0,minn,maxx])
-print(hf,"OUT/lagrangeBasis04",'-dpdflatex')  
+print(hf,"OUT/lagrangeBasis04",'-dpdflatex')
+print(hf,"OUT/lagrangeBasis04Gray",'-dpdflatex', "-mono")    
 
 %axis([-0.04,1.04,-2,2])
 %
@@ -70,6 +71,7 @@ title(['Lebesgue function $\lambda_X$ of degree ', num2str(n)]);
 %      ': ', namestr, ' Nodes']);
 axis([0.0,1.0,1,max(summ2)])
 print(hff,"OUT/lebesgueFunction04",'-dpdflatex')  
+print(hff,"OUT/lebesgueFunction04Gray",'-dpdflatex', "-mono") 
 %  printstr = strcat('Lebesgue0',num2str(n),namestr,'.pdf');
 %  exportgraphics(gca, printstr)
 %print(printstr,'-depsc')

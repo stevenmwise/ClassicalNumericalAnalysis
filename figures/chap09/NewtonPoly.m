@@ -19,3 +19,4 @@ legend('$f(x_i)$', '$\mathcal{I}_{X_3}[f](x)$', '$\mathcal{I}_{X_4}[f](x)$','Int
 % exportgraphics(gca, printstr)
     
 print(hf,"OUT/NewtonInterp",'-dpdflatex')
+print(hf,"OUT/NewtonInterpGray",'-dpdflatex', "-mono")

@@ -27,3 +27,6 @@ plot(x,ynoise,"linewidth",1,";$\\tilde{p}_W$;");
 hold on
 
 print( hf, "OUT/WilkinsonPlot", "-dpdflatex");
+
+hfgray = hf;
+print( hfgray, "OUT/WilkinsonPlotGray", "-dpdflatex", "-mono");

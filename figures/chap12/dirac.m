@@ -15,5 +15,7 @@ ylabel('$P_{20}(x)/\int_0^1 P_{20}(x) \diff x$');
 title('An Approximation of the Periodic Delta Function');
 grid on;
 printstr = strcat('OUT/DiracComb20');
+printstrGray = strcat('OUT/DiracComb20Gray');
 %  exportgraphics(gca, printstr)
 print(hf,printstr,'-dpdflatex')
+print(hf,printstrGray,'-dpdflatex','-mono')

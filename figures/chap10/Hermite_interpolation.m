@@ -66,7 +66,8 @@ end
 hf = figure();
 clf;
 zo = zeros(1,length(xo));
-plot(xx,yy,'b-',xo,yo,'bo','MarkerFaceColor','b')
+%plot(xx,yy,'b-',xo,yo,'bo','MarkerFaceColor','b')
+plot(xx,yy,'b-',xo,yo,'bo')
 hold on;
 plot(xo,zo,'bo')
 axis([a b -1 1]);
@@ -84,7 +85,8 @@ for ell = 1:4
 end
 
 zi = zeros(1,length(xi));
-plot(xi,yi,'rs','MarkerFaceColor','r')
+%plot(xi,yi,'rs','MarkerFaceColor','r')
+plot(xi,yi,'rs');
 plot(xi,zi,'rs')
 
 for ell = 1:M+1
@@ -103,5 +105,6 @@ lgd = legend('$(x,f(x)-p(x))$','$(x_i,f(x_i)-p(x_i))$','$x_i$','$(\xi_i,f(\xi_i)
 
 
 print(hf,"OUT/oscillation",'-dpdflatex')
+print(hf,"OUT/oscillationGray",'-dpdflatex',"-mono")
 hold off;
 

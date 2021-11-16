@@ -53,10 +53,12 @@ grid on;
 %
 % Output plots:
 printstr = strcat('OUT/Basis0',num2str(n),namestr);
+printstrGray = strcat('OUT/Basis0',num2str(n),namestr,'Gray');
 %  exportgraphics(gca, printstr)
 %print(printstr,'-depsc')
 %
 print(BasisFunctions,printstr,'-dpdflatex')
+print(BasisFunctions,printstrGray,'-dpdflatex','-mono')
 
 LebesgueFunctions = figure(2) 
 plot(z,summ2(1:m),'-','LineWidth',1.5)
@@ -67,8 +69,10 @@ title(['Lebesgue Function of Degree ', num2str(n), ...
 axis([0.0,1.0,1,max(summ2)])
 grid on;
 printstr = strcat('OUT/Lebesgue0',num2str(n),namestr);
+printstrGray = strcat('OUT/Lebesgue0',num2str(n),namestr,'Gray');
 
 print(LebesgueFunctions,printstr,'-dpdflatex')
+print(LebesgueFunctions,printstrGray,'-dpdflatex','-mono')
 
 %  exportgraphics(gca, printstr)
 %print(printstr,'-depsc')

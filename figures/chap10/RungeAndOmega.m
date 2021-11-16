@@ -85,6 +85,7 @@ lgd = legend('$f(x)$','$p_4(x)$','interpolation points','$p_8(x)$', ...
 
 axis([-1 1 -1 1])
 print(hf,"OUT/RungePhenomFix",'-dpdflatex')
+print(hf,"OUT/RungePhenomFixGray",'-dpdflatex', "-mono")
 
 
 hff= figure(2);
@@ -120,3 +121,4 @@ lgd = legend('$\omega_9(x)$ (Chebyshev)','$\omega_9(x)$ (Uniform)',...
 %  lgd.Interpreter = 'latex';
 
 print(hff,"OUT/OmegaPlot",'-dpdflatex')
+print(hff,"OUT/OmegaPlotGray",'-dpdflatex', "-mono")

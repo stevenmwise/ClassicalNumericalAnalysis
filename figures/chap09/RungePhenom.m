@@ -43,6 +43,7 @@ legend('$f(x)$','$p_4(x)$','$p_8(x)$','$p_{16}(x)$', ...
 axis([-1 1 -1 1])
 
 print(hf,"OUT/RungePhenom",'-dpdflatex')
+print(hf,"OUT/RungePhenomGray",'-dpdflatex', "-mono")
 
 hff = figure(2);
 clf;
@@ -84,11 +85,12 @@ plot(xdata,ydata,'k.','markersize',20);
 
 lgd = legend('$f(x)$','$p_4(x)$','interpolation points','$p_8(x)$', ...
     'interpolation points','$p_{16}(x)$','interpolation points','Location','south')
-lgd.FontSize = 14;
-lgd.Interpreter = 'latex';
+%lgd.FontSize = 14;
+%lgd.Interpreter = 'latex';
 
 axis([-1 1 -1 1])
 print(hff,"OUT/RungePhenomFix",'-dpdflatex')
+print(hff,"OUT/RungePhenomFixGray",'-dpdflatex', "-mono")
 
 figure(3);
 clf;

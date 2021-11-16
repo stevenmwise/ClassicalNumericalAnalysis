@@ -47,8 +47,10 @@ title('Fourier Projections of a Triangle Wave');
 legend('$n = 3$', '$n = 5$', '$n = 9$')
 grid on;
 printstr = strcat('OUT/TriangleWave');
+printstrGray = strcat('OUT/TriangleWaveGray');
 %  exportgraphics(gca, printstr)
 print(hf,printstr,'-dpdflatex')
+print(hf,printstrGray,'-dpdflatex','-mono')
 
 
 hff=figure(2)
@@ -62,7 +64,9 @@ title('Errors in the Fourier Projections of a Triangle Wave');
 legend('$n = 3$', '$n = 5$', '$n = 9$')
 grid on;
 printstr = strcat('OUT/TriangleWaveError');
+printstrGray = strcat('OUT/TriangleWaveErrorGray');
 %  exportgraphics(gca, printstr)
 print(hff,printstr,'-dpdflatex')
+print(hff,printstrGray,'-dpdflatex','-mono')
 
 
