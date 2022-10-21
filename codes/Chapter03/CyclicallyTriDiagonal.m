@@ -35,8 +35,8 @@ function [x, err] = CyclicallyTriDiagonal( a, b, c, f )
     return;
   end
   x = zeros(n,1);
-  denmoniator = b(1) + c(1)*v(1) + a(1)*v(n-1);
-  if abs(denominator) > eps( denorminator )
+  denominator = b(1) + c(1)*v(1) + a(1)*v(n-1);
+  if abs(denominator) > eps( denominator )
     x(1) =  ( f(1) - c(1)*u(1) - a(1)*u(n-1) )/denominator;
   else
     err = 1;
