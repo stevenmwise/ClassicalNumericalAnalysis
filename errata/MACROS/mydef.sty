@@ -1,0 +1,73 @@
+% Theorem-like environments
+\numberwithin{equation}{chapter}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[chapter]
+\newtheorem*{thm*}{Theorem}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem{col}[thm]{Corollary}
+\newtheorem{claim}[thm]{Claim}
+\newtheorem{conjecture}[thm]{Conjecture}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}[thm]{Definition}
+\newtheorem{defn}[thm]{Definition}
+
+\theoremstyle{definition}
+\newtheorem{rem}[thm]{Remark}
+
+%%%%%%%%%%%%%%% To be removed
+\newtheorem{exer}[thm]{Exercise}
+\newtheorem{ex}[thm]{Example}
+\newtheorem{example}[thm]{Example}
+
+
+
+%Operators
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\tridiag}{tridiag}
+\DeclareMathOperator{\signum}{sgn}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\nullity}{nullity}
+\DeclareMathOperator{\adj}{adj}
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argzero}{argzero}
+\DeclareMathOperator*{\tr}{tr}
+\DeclareMathOperator*{\diam}{diam}
+\DeclareMathOperator*{\diag}{diag}
+\DeclareMathOperator*{\im}{im}
+\DeclareMathOperator*{\rowspace}{row}
+\DeclareMathOperator*{\colspace}{col}
+\DeclareMathOperator{\clo}{clo}
+\DeclareMathOperator*{\esssup}{ess\, sup}
+\DeclareMathOperator{\BDF}{BDF}
+
+%New characters
+\newcommand{\Real}{\mathbb R}
+\newcommand{\Complex}{\mathbb C}
+\newcommand{\vare}{{\varepsilon}}
+\newcommand{\dt}{{\tau}}
+\newcommand{\hf}{\frac{1}{2}}
+\newcommand{\nrm}[1]{\left\| #1 \right\|}   
+\newcommand{\diff}{\textup{d}}
+\newcommand{\Ctransp}{{\textup{H}}}
+
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\newcommand{\Triang}{{\mathscr{T}}}
+\newcommand{\Space}{{\mathscr{S}}}
+
+\newcommand{\ie}{i.e.,\@\xspace}
+\newcommand{\eg}{e.g.,\@\xspace}
+
+\def\scl{\left(}
+\def\scr{\right)_{\calH}}
+\def\sbl{\left[}
+\def\sbr{\right]}

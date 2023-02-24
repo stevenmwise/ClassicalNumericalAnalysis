@@ -1,0 +1,654 @@
+%%%%%%%%%%%%%%%%%%%%
+%
+% Numerical Analysis: 
+% A.J. Salgado and S.M. Wise
+% 2017, 2018, 2019, 2020, 2021
+%
+%%%%%%%%%%%%%%%%%%%%
+\documentclass{book}
+%%%%%%%%%%%%%%%%%%%%
+
+
+    \textwidth=6.25in
+    \textheight=8.0in
+    \hoffset = 0.0in
+    \voffset = 0.0in
+    \footskip=1in
+    \oddsidemargin=0in
+    \evensidemargin=0in
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{amsmath}
+\usepackage{epigraph}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{stmaryrd}
+\usepackage{amssymb}
+\usepackage{MACROS/amsthm}
+\usepackage{alltt}
+\usepackage{url}
+\usepackage{setspace}
+\usepackage{longtable}
+\usepackage{rotating}
+\usepackage{cmbright}
+\usepackage{fancyhdr}
+\usepackage{nicefrac}
+\usepackage{listings}
+\usepackage{subcaption}
+
+\usepackage{MACROS/mydef}
+\usepackage{MACROS/boldfonts}
+\usepackage{xspace}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{makeidx}
+\usepackage[refpage]{nomencl}
+%%%%%%%%%%%%%%%%%%%%
+
+
+
+	\title{Errata and Corrections for Classical Numerical Analysis}
+%%%%%%%%%%%%%%%%%%%% Document
+	\begin{document}
+
+
+	\maketitle
+
+	\chapter{Linear Operators and Matrices}
+
+	\begin{enumerate}
+	\item 
+Page 5. The transpose operator for vectors acts as follows: (i) it converts column vectors into row vectors, $(\, \cdot \, )^\intercal: \Complex^{k\times 1} \to \Complex^{1\times k}$, and (ii) it converts row vectors into column vectors, $(\, \cdot \, )^\intercal: \Complex^{1\times k} \to \Complex^{k\times 1}$. Only one direction was specified in the text.
+
+	\item
+Page 8, proof of Theorem 1.21. Style consistency. Change the ``$\exists \bfy\in\Complex^m$" to ``there is some $\bfy\in\Complex^m$."
+	
+	\item
+Page 9. We should explicitly define a matrix norm and provide more properties. For example, we should point out that the objects defined are all matrix norms, and the induced norm of the identity is 1. Otherwise, students are missing some key concepts and are confused.
+
+	\item
+Page 10, Proposition 1.31. In the hypotheses of the proposition, the extra $[a_{i,j}]$ in ``$\msfA = [a_{i,j}]=[a_{i,j}]$" is superfluous.
+
+	\item
+Page 11, Proposition 1.35. This result should be expanded to include both right and left multiplication by unitary matrices, and it should include the analogous results for the Frobenius norm.
+
+	\item
+Page 13, Proposition 1.43. The trace of a square matrix, denoted, ${\rm tr}(\msfA)$, is defined as the sum of the diagonal elements. Specifically, for $\msfA = [a_{i,j}]\in\Complex^{n\times n}$, ${\rm tr}(\msfA) = \sum_{i=1}^n a_{i,i}$. The symbol $\det(\msfA)$ stands for the determinant of $\msfA$. See the references.
+
+	\item
+Page 14, Proposition 1.47. This should be Theorem 1.47.
+
+	\item
+Page 16, Problem 1.5. $C_\msfA$ should just be ${\rm col}(\msfA)$, the previously introduced notation for the column space of $\msfA$.
+
+	\item
+Page 16, Problem 1.19. Change the problem to the following: Suppose that $(\polV, \nrm{\, \cdot \, }_{\polV})$ and $(\polW, \nrm{\, \cdot \, }_{\polW})$ are finite-dimensional complex normed vector spaces. Suppose that $\nrm{ \, \cdot \, }_{\mathfrak{L}(\polV,\polW)}: \mathfrak{L}(\polV,\polW) \to \Real$ is the induced norm. Then, $\nrm{ \, \cdot \, }_{\mathfrak{L}(\polV,\polW)}$ is a bona fide norm on the vector space $\mathfrak{L}(\polV,\polW)$ and
+ 	\begin{align*}
+\nrm{A}_{\mathfrak{L}(\polV,\polW)} & = \sup \left\{ \nrm{Ax}_{\polW} \ \middle| \ x\in\polV, \ \nrm{x}_{\polV} = 1   \right\}
+	\\
+& = \sup \left\{ \nrm{Ax}_{\polW} \ \middle| \ x\in\polV, \ \nrm{x}_{\polV} \le 1   \right\}.
+	\end{align*}
+Furthermore, for the identity operator $I\in \mathfrak{L}(\polV)$, we have $\nrm{I}_{\mathfrak{L}(\polV)} =1$.
+
+	\item
+Page 17, Problem 1.24. This should come after Problem 1.29. Furthermore, we need the general result $\rho(\msfA)\le \nrm{\msfA}$, for any induced norm, for any square matrix. This, fact, however, does not appear until Chapter 4, specifically, Theorem 4.3. 
+
+	\item
+Page 17, Problem 1.26. The symbol ${\rm tr}\, \msfA$ should be ${\rm tr}(\msfA)$ for notational consistency. This problem needs $\nrm{\msfU\msfA} = \nrm{\msfA}$ and $\nrm{\msfA\msfV} = \nrm{\msfA}$ for the 2 and Frobenius norms, where $\msfU$ and $\msfV$ are unitary. Unfortunately, the results are only partially alluded to. See Proposition 1.35.
+
+	\item
+Page 17, Problem 1.29. The hint should refer to Problem 1.39 and Proposition/Theorem 1.47, specifically.
+	
+	\item
+Page 17, Problem 1.30. Add the following to the end of the problem: ``where
+	\[
+S^{n-1}_{\Complex^n} = \left\{x\in \Complex^n \ \middle| \ \nrm{x}_{\Complex^n} = 1 \right\}."
+	\]
+	
+	\item
+Page 18, Problem 1.32. The assumptions in parts (c) and should be corrected by adding ``for all $i\le i\le n$."
+
+	\end{enumerate}
+	
+	\chapter{The Singular Value Decomposition}
+	
+	\begin{enumerate}
+	\item
+Page 22, Theorem 2.3. Add a remark. The proof of existence of the SVD can be replaced by a more elementary one. See Problem 2.9, page 30.
+	\end{enumerate}
+	
+	\chapter{Systems of Linear Equations}
+	
+	\begin{enumerate}
+	\item 
+Page 35, Theorem 3.5, part 2 of theorem hypotheses. Em dash or en dash? Check the style guide.
+	\item 
+Page 35, Theorem 3.5, part 6. $\msfT_k^{-1}$ should be $\msfT^{-1}$. The hypotheses should read as follows: If $\left[ \msfT \right]_{i,i} >0$, for all $i =1, \ldots , n$, then  $\left[ \msfT^{-1} \right]_{i,i} = \frac{1}{\left[ \msfT \right]_{i,i}} > 0$, for all $i =1, \ldots , n$.
+
+	\item
+Page 52, Proof of Theorem 3.24. In the proof of the second part, instead of 
+	\[
+\frac{\nrm{\msfA\bfx}_\infty}{\nrm{\bfx}_\infty} \ge \delta, \quad \forall \, \bfx \in \Complex^n,
+	\]
+the line should read
+	\[
+\frac{\nrm{\msfA\bfx}_\infty}{\nrm{\bfx}_\infty} \ge \delta, \quad \forall \, \bfx \in \Complex_\star^n.	
+	\]
+The subscript $\star$ was missing.
+
+	\item
+Page 66, Problem 3.15. Add hint: ``Use the Gershgorin Circle Theorem."
+
+	\item
+Page 68, Listing 3.2. The variable {\tt denominator} is spelled four different ways.
+	\end{enumerate}
+	
+	\chapter{Norms and Matrix Conditioning}
+	
+	\begin{enumerate}
+	\item
+Page 80, Remark 4.15. Here we refer to the term ``ill-conditioned," but it is not defined. We say a matrix is  ill-conditioned if it has a large condition number, that is, significantly larger than 1.
+
+	\item
+Page 86, Theorem 4.21. The assumption $\nrm{\msfA^{-1}\delta\msfA} < 1$ should be replaced by $\nrm{\msfA^{-1}} \cdot \nrm{\delta\msfA} < 1$. The proof should be modified accordingly. In particular, to conclude that the perturbed coefficient matrix $\msfA+\delta\msfA$ is invertible, use the inequality
+	\[
+\nrm{\msfM} = \nrm{ - \msfA^{-1}\delta\msfA} \le \nrm{\msfA^{-1}} \cdot \nrm{\delta\msfA} < 1.
+	\]
+Later in the proof, one can be assured that
+	\[
+\frac{1}{1-\nrm{\msfM}} \le \frac{1}{1-\nrm{\msfA^{-1}}\nrm{\delta\msfA}} = \frac{1}{1-\kappa(\msfA) \frac{\nrm{\delta\msfA}}{\nrm{\msfA}}},
+	\]
+an inequality that may fail if only $\nrm{\msfA^{-1}\delta\msfA} < 1$ is assumed.
+
+	\item
+Page 87, Theorem 4.22. Same correction as in the previous theorem.
+
+	\end{enumerate}
+	
+	\chapter{Linear Least Squares Problem}
+	
+	\begin{enumerate}
+	\item 
+Page 90, proof of Lemma 5.4. The line 
+	\[
+\left(\msfA^H\msfA\bfx,\bfx\right)_2 = \left(\msfA\bfx,\msfA\bfx\right)_2 = \nrm{\msfA\bfx}_2 \ge 0 .
+	\]
+should read
+	\[
+\left(\msfA^H\msfA\bfx,\bfx\right)_2 = \left(\msfA\bfx,\msfA\bfx\right)_2 = \nrm{\msfA\bfx}_2^2\ge 0 .
+	\]
+The exponent 2 is missing on the norm.
+	\item 
+Page 90, proof of Lemma 5.4. The sentence fragment ``to reach a contradiction, that $\rank(A) < n$" should be ``to reach a contradiction, that $\rank(\msfA) < n$". In other words the matrix should be written as $\msfA$ not $A$. Recall that the symbol $\msfA$ usually represents a matrix, while the symbol $A$ represents a linear operator.
+
+%	\item
+%Page 91, proof of Theorem 5.5. The line 
+%	\begin{displaymath}
+%0=  \frac{d g}{d s}
+%	\end{displaymath}
+%should read
+%	\begin{displaymath}
+%0= \left.\frac{d g}{d s}\right|_{s=0} = - 2 {\bfr}^\intercal\mathsf{A}{\bfy} 
+%	\end{displaymath}
+
+
+	\item
+Page 91, proof of Theorem 5.5. The line 
+	\[
+= \Phi(\bfx) - \bfr^\intercal\msfA\bfy - \bfy\msfA^\intercal\bfr + \bfy^\intercal\msfA^\intercal\msfA\bfy
+	\]
+should read
+	\[
+= \Phi(\bfx) - \bfr^\intercal\msfA\bfy - \bfy^\intercal\msfA^\intercal\bfr + \bfy^\intercal\msfA^\intercal\msfA\bfy.
+	\]
+In other words, there is a missing ${}^\intercal$ on $\bfy$ in the term $- \bfy\msfA^\intercal\bfr$.
+
+
+
+	\item
+Page 96, Theorem 5.23. This should be listed as Corollary 5.23. Its proof follows directly from the Theorem 5.21.
+
+	\item
+Page 100, Proof of Theorem 5.26. In the ``($2 \Longrightarrow 1$)" part of the  proof, specifically, last line to establish $\Phi(\bfx_o +\bfw) \ge \Phi(\bfx_o)$, the  ``$\ge \Phi(\bfx_o)$" should be on a separate line to follow style guidelines.
+
+	\item
+Page 111, Proof of Lemma 5.47. The line
+	\[
+\nrm{\bfx}_2 = \nrm{\msfH_{\bfw}\bfx}_2 = |k|\nrm{\bfx}_2\nrm{\bfe_j}	
+	\]
+should read
+	\[
+\nrm{\bfx}_2 = \nrm{\msfH_{\bfw}\bfx}_2 = |k|\nrm{\bfx}_2\nrm{\bfe_j}_2.	
+	\]
+In other words, the term $\nrm{\bfe_j}$ is missing the subscript 2.
+
+	\item
+Pages 112--114, Lemma 5.50 and Definition 5.51. The symbol $\hat{\bfe}_1$ should be changed to $\bfe_1$. Check notational consistency throughout. Do we use $\hat{\bfe}_j$ or $\bfe_j$ for canonical basis elements.
+
+
+	\end{enumerate}
+	
+	\chapter{Linear Iterative Methods}
+	
+	\begin{enumerate}
+	\item
+Page 126. Notation. In this chapter we use the notation $[\bfx_k]_i = x_{i,k}$. But, it seems that we use the notation $[\bfx_k]_i = x_{k,i}$ in other places. Check the consistency.
+
+	\item
+Page 129, proof of Theorem 6.12. Half way down the page, the line
+	\[
+\left|\sum_{j+1}^n a_{i,j} x_j  \right|	\le \sum_{j+1}^n|a_{i,j}| \nrm{\bfx}_\infty
+	\]
+should be replaced by 
+	\[
+\left|\sum_{j=i+1}^n a_{i,j} x_j  \right|	\le \sum_{j=i+1}^n|a_{i,j}| \nrm{\bfx}_\infty .
+	\]
+In other words, the lower summation indices are incorrect.
+
+	\item
+Page 129, proof of Theorem 6.12. Last line of the proof. The line
+	\[
+\nrm{T_{\rm GS}}_\infty \le \gamma < 1	
+	\]
+should read
+	\[
+\nrm{\msfT_{\rm GS}}_\infty \le \gamma < 1	.
+	\]
+In other words, the typeface of the $\msfT_{\rm GS}$ is incorrect.
+
+	\item
+Page 134, proof of Theorem~6.15. Halfway down the page, the line
+	\[
+\nrm{\bfe_{k+1}}_2 = \nrm{\msfT_{\rm R}^k\bfe_0}_2 \le \rho^k\nrm{\bfe_0}_2.
+	\]
+should read
+	\[
+\nrm{\bfe_k}_2 = \nrm{\msfT_{\rm R}^k\bfe_0}_2 \le \rho^k\nrm{\bfe_0}_2.
+	\]
+In other words, $\bfe_{k+1}$ should be $\bfe_k$.
+
+
+ 	
+ 	\item
+ Page 137, proof of Theorem 6.18. Top of the page, the proof that $\left(\msfB_\omega - \msfA\right)\bfy = \lambda\msfA\bfw$ can be significantly simplified.
+ 
+ 	\item
+ Page 138, proof of Theorem 6.19. In the first line, the sentence ``Another method of proof is demonstrated in the next section." should read instead ``Another method of proof is demonstrated in the Section 6.8."
+
+	\item
+Page 138, proof of Theorem 6.19. For the forward direction, a few more steps are required for the proof. The fact that $\bfw^\Ctransp\msfA\bfw >0$ for all eigenvectors $\bfw$ of $\msfT$ is not, on its own, enough to show that $\msfA$ is HPD. See Problem 6.6.
+
+	\item
+Page 138, proof of Theorem 6.19. Last line. The last line
+
+\hspace{0.25in}``every eigenvector $\bfw\in\Complex^n_\star$. This proves that $\msfA$ must be HPD."
+
+\noindent should be replaced by
+
+\hspace{0.25in}``every eigenvector $\bfw\in\Complex^n_\star$ of $\msfT$. However, this is not enough to prove that $\msfA$ is HPD. For this direction see Problem 6.6 and the proof of Theorem 6.26 for inspiration."
+
+	\item
+Page 141, proof of Theorem 6.25. After the words ``we obtain", the calculation should read
+	\begin{align*}
+0 &=  (\msfB\bfq_{k+1},\bfq_{k+1})_2 + (\msfA\bfe_k,\bfq_{k+1})_2 
+	\\
+&=  \left( \left(\msfB-\frac12\msfA \right)\bfq_{k+1},\bfq_{k+1} \right)_2 + \frac12(\msfA\bfe_{k+1},\bfe_{k+1})_2 - \frac12(\msfA\bfe_k,\bfe_k)_2 + \Im\left((\msfA\bfe_k,\bfe_{k+1})_2 \right)
+	\\
+& =  (\msfQ\bfq_{k+1},\bfq_{k+1})_2 + \frac12 \| \bfe_{k+1} \|_{\msfA}^2 - \frac12 \| \bfe_k \|_{\msfA}^2 + \mathfrak{i}\Im\left((\msfA\bfe_k,\bfe_{k+1})_2 \right).
+	\end{align*}
+In other words, the term $\mathfrak{i}\Im\left((\msfA\bfe_k,\bfe_{k+1})_2 \right)$ is missing in the text. After this point, the proof is correct.
+
+	\item
+Page 147, proof of Theorem 6.30 and preceding discussion. We tacitly assume that $\alpha_{k+1}$ is real.
+
+	\item
+Page 148, proof of Theorem 6.31. We tacitly assume that $\alpha_{k+1}$ is real.
+
+	\item
+Page 148, proof of Theorem 6.31.  The calculations and identities 
+\begin{align*}
+  (\msfC\bfv_k,\bfv_k)_2 &= (\msfS^{-1/2}\msfA\msfS^{-1/2}\bfw_k,\msfS^{-1/2}\bfw_k)_2 = (\msfA\bfw_k,\bfw_k)_2, \\ 
+  \| \msfC\bfv_k \|_2^2 &= (\msfS^{-1/2}\msfA\bfw_k,\msfS^{-1/2}\msfA\bfw_k)_2 = \| \msfA\bfw_k \|_{\msfS^{-1}}^2, \\
+  \| \bfv_{k+1} \|_2 & = (\msfS\bfw_{k+1},\bfw_{k+1} )_2 = \| \msfA\bfe_{k+1} \|_{\msfS^{-1}}^2,
+\end{align*}
+are incorrect. The correct calculations and identities are
+	\begin{align*}
+(\msfC\bfv_k,\bfv_k)_2 &= (\msfS^{-1/2}\msfA\msfS^{-1/2}\msfS^{1/2}\bfw_k,\msfS^{1/2}\bfw_k)_2 = (\msfA\bfw_k,\bfw_k)_2, 
+	\\ 
+  \| \msfC\bfv_k \|_2^2 &= (\msfS^{-1/2}\msfA\bfw_k,\msfS^{-1/2}\msfA\bfw_k)_2 = \| \msfA\bfw_k \|_{\msfS^{-1}}^2, \\
+  \| \bfv_{k+1} \|_2^2 & = (\msfS\bfw_{k+1},\bfw_{k+1} )_2 = \| \msfA\bfe_{k+1} \|_{\msfS^{-1}}^2.
+\end{align*}
+
+
+	\end{enumerate}
+	
+	\chapter{Variational and Krylov Subspace Methods}
+	
+	\begin{enumerate}
+	\item
+Page 159, Definition 7.3. The sentence fragment ``We say that $\msfB$ is self-adjoint positive definite with respect to the inner product ..." should read ``We say that $\msfB$ is \textbf{self-adjoint positive definite} with respect to the inner product ..." In other words, ``self-adjoint positive definite" should appear in bold letters.
+
+	\item
+Page 164, Proof of Theorem 7.16. In the last line of the proof the sentence ``Combining (7.6) and(7.7), we get the desired result." should read ``Combining (7.6) and (7.7), we get the desired result." In other words, a space should be placed between ``and" and ``(7.7)".
+
+	\item
+Page 172, Theorem 7.31. The theorem statement should be modified to read as follows:
+
+\textbf{Theorem 7.31} (convergence). Let $\msfA\in\Complex^{n\times n}$ be HPD, $f\in \Complex^n_\star$, and $\bfx = \msfA^{-1}\bff$. Suppose that $\left\{ \bfx_k \right\}_{k = 1}^\infty$ is the sequence generated by the zero-start CG algorithm. Then, there is an $m_\star\in\{1,\ldots , n\}$ for which
+	\[
+\bfx_k\ne \bfx, \quad 1\le k \le m_\star-1, \quad \bfx_k = \bfx, \quad k\ge m_\star,
+	\] 
+and $\dim \calK_k(\msfA,\bff) = k$, for $k = 1, \ldots, m_\star$.
+
+	\item
+Page 172, proof of Theorem 7.31. The line ``... and notice that, since $\bff\ne 0$, ..." should read ``... and notice that, since $\bff\ne {\bf 0}$, ...".
+
+	\item
+Page 172, proof of Theorem 7.31. The line ``Assume now that, for all $m = 1, \ldots, k$ with $k < n-1$ we have $\dim \calK_k = k$ and $\bfx_k \neq \bfx$." should be replaced by ``Assume now that, for all $m = 1, \ldots, k$, with $k < n-1$, we have $\dim \calK_m = m$ and $\bfx_m \neq \bfx$.
+
+	\item
+Page 175, statement of Theorem 7.36. The line ``...for all $j = 1, \ldots, n$, with the orthogonality relations..." should read ``...for all $j = 1, \ldots, m$, with the orthogonality relations...". In other words, the $n$ should be an $m$.
+
+
+	\item
+Page 176, proof of Theorem 7.36. In the expansion of $\phi^2(\bfz)$, the term $2\bfw^H\msfA\bfe_j$ should be replaced by $2\Re\left(\bfw^H\msfA\bfe_j\right)$, and the term $2\bfw^H\bfr_j$ should be replaced by $2\Re\left(\bfw^H\bfr_j\right)$, since the computation is done over the complex field.
+
+
+	\end{enumerate}
+	
+	\chapter{Eigenvalue Problems}
+	
+	\begin{enumerate}
+	\item
+Page 200, statement of Theorem~8.2. The expression ``$\sigma(\msfA) \subset \bigcup_{i=1}^n D_i$" should be changed to ``$\sigma(\msfA) \subseteq \bigcup_{i=1}^n D_i$". It is possible to have set equality when the Gerschgorin radii are all zeros.
+
+	\item
+Page 209, statement of Theorem~8.19. The line
+	\[
+\lambda_r = \argmin_{j = 1}^n  |\lambda_j - \mu | , \quad \lambda_s = \argmin_{\substack{j = 1 \\ j\ne r}}^n |\lambda_j - \mu |
+	\]
+should be
+	\[
+r = \argmin_{j = 1}^n  |\lambda_j - \mu | , \quad s = \argmin_{\substack{j = 1 \\ j\ne r}}^n |\lambda_j - \mu |.
+	\]
+	
+	\item
+Page 218, proof of Theorem~8.26. At the top of the page, the line
+	\[
+\tilde{\msfQ}_{k}, \to \msfI \qquad \tilde{\msfR}_{k}\to \msfI , \qquad k\to\infty
+	\]
+should read
+	\[
+\tilde{\msfQ}_{k} \to \msfI \qquad \tilde{\msfR}_{k}\to \msfI , \qquad k\to\infty.	
+	\]
+There is an errant comma.
+	
+	\end{enumerate}
+
+	
+	\setcounter{chapter}{14}
+	
+	\chapter{Solution of Nonlinear Equations}
+	
+	\begin{enumerate}
+	\item
+Page 432, proof of Theorem 15.26. There is a format error 2/3 of the way down the page. The multiline equation should begin a new line with the second equals sign, and there is a missing comma. The separate line should read
+	\[
+ = f^{(m)}(\zeta_k)\frac{(x_k-\xi)^{m-1}}{(m-1)!},
+	\]
+	
+	\item
+Page 434, proof of Theorem 4.27. Format error, similar to that above. In the multiline equation 1/2 down the page, the last equals sign should begin a new line. The separate line should read
+	\[
+= \frac{1}{2}|x_k-\xi|.	
+	\]
+	
+	\item
+Page 435, Theorem 15.26. Add to the assumptions of the theorem that $m\ge 2$. Otherwise, the rate of convergence is not exactly linear.
+
+	\item
+Page 439, proof of Theorem 15.33. There is an error in the proof. \textbf{The Following lines} 
+
+	\medskip
+	
+Thus,
+\[
+  x_{k+1} -\xi = x_k - \xi -\frac{f'(\gamma_k) (x_k-\xi)}{f'(\eta_k)} = (x_k-\xi)\left[1 - \frac{f'(\gamma_k)}{f'(\eta_k)}\right] \le \frac{2}{5}(x_k-\xi).
+\]
+If $|x_0-\xi| \le \delta$ and $|x_1-\xi| \le \delta$ then, by induction, we see that for $k\ge 2$,
+\[
+  |x_k-\xi| \le \left( \frac{2}{5}\right)^{k-1} \delta .
+\]
+
+	\medskip
+
+\textbf{should be replaced by}
+
+	\medskip
+	
+Thus,
+	\[
+x_{k+1} -\xi = x_k - \xi -\frac{f'(\gamma_k) (x_k-\xi)}{f'(\eta_k)} = (x_k-\xi)\left[1 - \frac{f'(\gamma_k)}{f'(\eta_k)}\right] .
+	\]
+Since
+	\[
+-\frac{2}{3} \le 1 - \frac{f'(\gamma_k)}{f'(\eta_k)} \le \frac{2}{5} ,
+	\]
+it follows that
+	\[
+|x_{k+1} -\xi| \le \frac{2}{3} |x_k - \xi|.
+	\]
+If $|x_0-\xi| \le \delta$ and $|x_1-\xi| \le \delta$ then, by induction, we see that for $k\ge 2$,
+	\[
+|x_k-\xi| \le \left( \frac{2}{3}\right)^{k-1} \delta .
+	\]
+
+	\medskip
+	
+	
+	\item
+Pages 440 -- 441. All references to the $i^{\rm th}$ component of the vector $\bff$ should be $f_i$, not $\bff_i$. Components of a vector function should be unbolded.
+
+	\item
+Page 443, proof of Theorem 15.37. Format error. In the  multiline equation/inequality 1/3 of the way down the page, the subsequent equals signs and less than equals signs should each begin a new line. 
+
+	\item
+Page 448, problem 15.28. The problem steps are incorrect. They should read as follows:
+
+  \begin{enumerate}[a)]
+    \item Let $\bfe_k = \bxi - \bfx_k$ be the error. Establish an iteration error equation of the form
+    \[
+      \begin{bmatrix}
+        \frac{\partial f}{\partial x_1}(\bxi) & 0 
+ \\
+        \frac{\partial g}{\partial x_1}(\bxi) & \frac{\partial g}{\partial x_2}(\bxi)
+      \end{bmatrix}
+      \bfe_{k+1} =
+      \begin{bmatrix}
+        \frac{\partial f}{\partial x_1}(\bxi) \bfe_{1,k+1}   \\
+        \frac{\partial g}{\partial x_1}(\bxi) \bfe_{1,k+1} + \frac{\partial g}{\partial x_2}(\bxi) \bfe_{2,k+1} 
+      \end{bmatrix}
+      = \bfr_{k+1}.
+    \]
+    Give a precise expression for the remainder term, $\bfr_{k+1}$.
+    
+    \item Give sufficient conditions for the convergence of the scheme.
+  \end{enumerate}
+
+
+	\end{enumerate}
+	
+	\chapter{Convex Optimization}
+	
+	\begin{enumerate}
+	\item
+Page 452, Example 16.2. The definition of the inner product
+	\[
+(p,q)_{L^2(-1,1)} = \int_{0}^1p(x)q(x)\, \diff x, \quad \forall \, p,q\in\polP_n
+	\]
+is incorrect. The definition should read
+	\[
+(p,q)_{L^2(-1,1)} = \int_{-1}^1p(x)q(x)\, \diff x, \quad \forall \, p,q\in\polP_n
+	\]
+In other words, the lower limit of the integral should be $-1$, not 0.
+
+	\item
+ Page 462, proof of Theorem 16.27. About halfway through the proof, the line
+ 	\[
+ \alpha < y_n < \alpha+\frac{1}{n}	
+ 	\]
+ should instead read
+ 	\[
+ \alpha \le  y_n < \alpha+\frac{1}{n}.	
+ 	\]
+ 	
+ 	\item
+ Page 467, after the proof of Proposition 16.46. The line
+ 	
+ \hspace{0.25in}``If $E$ is strongly convex and the Lipschitz smooth, then ..."
+ 
+ should read
+ 	
+ \hspace{0.25in}``If $E$ is strongly convex and Lipschitz smooth, then ..."
+ 
+ There is a superfluous ``the".
+ 
+	\end{enumerate}
+	
+\chapter{Initial Value Problems for Ordinary Differential Equations}
+
+	\begin{enumerate}
+	\item
+Page 510, Definition 17.4. The fragment ``for all $t\in I$ and for all $\bfv_1, \bfv_2\in \Omega$" should be replaced with  ``for all $t\in I$ and for all $\bfv_1, \bfv_2\in \overline{\Omega}.$" In other words, the $\Omega$ should be $\overline{\Omega}$.
+
+	\item
+Page 517, Proposition 17.11. Add to the initial hypotheses the following: ``Suppose that $S = [0,T]\times \overline\Omega$, where $\Omega \subseteq\Real^d$ is open and convex."
+
+	\item
+Page 517, Proposition 17.11. To the end of the proposition statement add the following: ``Moreover, if $S = [0,T]\times \Real^d$, then $\bff$ is globally $\bfu$-Lipschitz.
+
+	\item
+Page 517, Remark 17.12. The sentence ``The assumption that $\bff\in F^1(S)$ is not often verified in practice." should be replaced by ``The assumption that $\bff\in F^1(S)$, when $S = [0,T] \times \Real^d$, is not often verified in practice. In fact, it often fails to be true. If $\bff\in F^1([0,T]\times \Real^d)$, then $\bff$ would be globally $\bfu$-Lipschitz. In many important, real-world problems the slope function is only locally Lipschitz." 
+
+	\item
+Page 518, Theorem 17.13. The assumptions about the solution must be changed. Replace the sentence 
+
+	\medskip
+
+\hspace{0.5in}``Then the unique classical solution on $I$ to (17.1), which we denote $\bfu\in C^1\left(I;\mathbb{R}^d\right)$, actually belongs to $C^{m+1}\left(I;\mathbb{R}^d\right)$."
+
+	\medskip
+
+with the following sentences:
+
+	\medskip
+
+\hspace{0.5in}``Assume that $\bfu\in C^1(I,\Omega)$ is a classical solution to (17.1). Then $\bfu \in C^{m+1}\left(I;\Omega\right)$."
+
+	\medskip
+
+In other words, we should assume that $\bfu\in C^1(I,\Omega)$ not $\bfu \in  C^1(I,\Real^d)$ to conform to the general definition of $S$.
+
+
+	\end{enumerate}
+	
+\chapter{Single-Step Methods}
+
+	\begin{enumerate}
+	\item
+Page 527, before Definition 18.2, add the following remark:
+
+	\medskip
+	
+	\begin{rem}
+We will assume throughout the next few chapters that the slope function satisfies 
+	\[
+\bff\in F^1(S), \quad  \mbox{where} \quad  S = [0,T]\times \Real^d,
+	\]
+which implies that $\bff$ is globally $\bfu$-Lipschitz continuous. This simplification guarantees the existence of a classical solution. More importantly, it allows us to apply the Lipschitz estimate, with a single constant $L$, with either the solution values or with the approximate solution values, without worrying about whether those values are in some bounded open set $\Omega$. 
+	\end{rem}
+
+
+  
+	\end{enumerate}
+	
+\chapter{Runge-Kutta Methods}
+
+	\begin{enumerate}
+	\item
+Page 536. The first Taylor expansion,
+	\[
+  \bfu(t+s) = \bfu(t) + s \bfu'(t) + \frac{s^2}{2} \bfu''(t) + \frac{s^3}6 \bfu''(t) + \calO(|s|^4)
+	\] 
+is incorrect. It should read as follows:
+	\[
+\bfu(t+s) = \bfu(t) + s \bfu'(t) + \frac{s^2}{2} \bfu''(t) + \frac{s^3}6 \bfu'''(t) + \calO(|s|^4)
+	\] 
+In other words, the term $\frac{s^3}6 \bfu''(t)$ should be $\frac{s^3}6 \bfu'''(t)$.	
+	
+	\item
+Page 338, proof of Theorem~19.1. The last estimate on the page,
+	\[
+(1+\tau L)^m < e^{m \tau L} \le e^{K\tau L}  = e^{TL},
+	\]
+is incorrect. It should read as follows:
+	\[
+\left(1+\tau L +\frac{\tau^2 L^2}{2}\right)^m < e^{m \tau L} \le e^{K\tau L}  = e^{TL} .
+	\]
+	
+	\item
+Page 541, Remark~19.8. The definition of the local truncation error,
+\[
+  \tau \bfcalE[\bfu](t,s) =  \bfu(t) - \bfu(t-s) - s\sum_{i=1}^r b_i \bff(t-\tau+c_i \tau,\bxi_{e,i}) ,
+\]
+is incorrect. It should read as follows:
+	\[
+ \bfcalE[\bfu](t,s) =  \frac{\bfu(t) - \bfu(t-s)}{s} - \sum_{i=1}^r b_i \bff(t-s+c_i s,\bxi_{e,i}) .
+	\]
+	
+	\item
+Page 545, proof of Theorem~19.13, second sentence. The statement $\bfrho\in \left[ \polP_r\right]^d$ is incorrect.  It should read $\bfrho\in \left[ \polP_{r-1}\right]^d$. In other words, the $r$ should be $r-1$.
+	
+	\end{enumerate}
+	
+	\setcounter{chapter}{23}
+
+\chapter{Finite Difference Methods for Elliptic Problems}
+
+	\begin{enumerate}
+	\item
+Page 699, Problem 22. The dimension of space should be 1.
+
+	\end{enumerate}
+	
+\chapter{Finite Element Methods for Elliptic Problems}
+
+	\begin{enumerate}
+	\item
+Page 707, Theorem 25.15. Use the simpler proof from the prelim packet. Students have struggled to understand the logic of the current proof.
+	\item
+Page 709. The spacing is inadequate in Equation~(25.5). The line should read
+	\[
+\mathcal{A}(v,z_g) = \int_0^1 g(x) v(x)\, \diff x, \quad \forall \, v\in H_0^1(0,1).
+	\]
+	\end{enumerate}
+	
+	\appendix
+	
+	\setcounter{chapter}{1}
+	
+\chapter{Basic Analysis Review}
+
+	\begin{enumerate}
+	\item
+Page 858, Definition B.16. $\bfx\in\Complex$ should be  $\bfx\in\Complex^d$. The proper dimension $d$ is missing.
+
+	\item
+Page 865, Definition B.42. The opening sentence ``Let $[a,b]\subset \Real$ be a compact integral." Should be ``Let $[a,b]\subset \Real$ be a compact interval.". In other words ``integral" should be changed to ``interval." 
+	\end{enumerate}
+
+	\end{document}
