@@ -565,7 +565,7 @@ Page 527, before Definition 18.2, add the following remark:
 	\medskip
 	
 	\begin{rem}
-We will assume throughout the next few chapters that the slope function satisfies 
+We will assume throughout this and the next few chapters that the slope function satisfies 
 	\[
 \bff\in F^1(S), \quad  \mbox{where} \quad  S = [0,T]\times \Real^d,
 	\]
@@ -613,6 +613,39 @@ is incorrect. It should read as follows:
 	\item
 Page 545, proof of Theorem~19.13, second sentence. The statement $\bfrho\in \left[ \polP_r\right]^d$ is incorrect.  It should read $\bfrho\in \left[ \polP_{r-1}\right]^d$. In other words, the $r$ should be $r-1$.
 	
+	\end{enumerate}
+	
+\chapter{Linear Multi-step Methods}
+
+	\begin{enumerate}
+	
+	\item
+Page 569, Definition 20.16. The statement 
+
+\qquad We say that solutions to (20.8) are \textbf{stable} iff given any starting values $\left\{\zeta_k \right\}_{k=0}^{q-1} \subset \Real$, the sequence $\left\{\zeta_k \right\}_{k=0}^\infty \subset \Real$ is bounded by a constant $C>0$ that only depends upon the starting values.
+
+is incorrect. It should read
+
+\qquad We say that solutions to (20.8) are \textbf{stable} iff given any starting values $\left\{\zeta_k \right\}_{k=0}^{q-1} \subset \Complex$, the sequence $\left\{\zeta_k \right\}_{k=0}^\infty \subset \Complex$ is bounded by a constant $C>0$ that only depends upon the starting values.
+
+In other words, $\Real$ should be replaced by $\Complex$.
+
+	\item
+Page 570, Example 20.9. The equation   
+	\[
+w^K = \frac{2^K-1}{K} \to \infty.
+	\]
+should be replaced by
+	\[
+\zeta^K = \frac{2^K-1}{K} \to \infty.
+	\]
+	\end{enumerate}
+	
+	\chapter{Stiff Systems of Ordinary Differential Equations and Linear Stability}
+	
+	\begin{enumerate}
+	\item 
+Bottom of page 589, proof of Theorem 21.17. The fragment ``for some coefficients $\alpha_{j,i}\in\Complex$, $q$ a number, ..." is incorrect. It should read ``for some coefficients $\alpha_{j,i}\in\Complex$, $q$ in number, ...". In other words, the word ``a" should be replaced by the word ``in".
 	\end{enumerate}
 	
 	\setcounter{chapter}{23}
