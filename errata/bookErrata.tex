@@ -653,8 +653,67 @@ Bottom of page 589, proof of Theorem 21.17. The fragment ``for some coefficients
 \chapter{Finite Difference Methods for Elliptic Problems}
 
 	\begin{enumerate}
+	
 	\item
-Page 699, Problem 22. The dimension of space should be 1.
+Page 683, proof of Theorem 24.30, last estimate of the proof. There are two errors. The estimate
+	\[
+0 = - h^2 \Delta v_1 = 2v_1 - v_0 - v_2 > 0	
+	\]
+should be replaced by
+	\[
+0 \ge  - h^2 \Delta_h v_1 = 2v_1 - v_0 - v_2 > 0	.
+	\]
+In particular, the ``$=$" should be ``$\ge$" and the ``$\Delta$" should be ``$\Delta_h$".
+
+	\item
+Page 684, proof of Theorem 24.31, next to last estimate of the proof. The estimate
+	\[
+\pm w \le \pm \psi \le \max\left\{ \psi_\pm(0) , \psi_\pm(1) \right\} \le 	\max_{j\in \{0,1\}} |g_j| + \frac{\nrm{f_h}_{L_h^\infty}}{8}
+	\]
+should be replaced by
+	\[
+\pm w \le \psi_\pm  \le \max\left\{ \psi_\pm(0) , \psi_\pm(1) \right\} \le 	\max_{j\in \{0,1\}} |g_j| + \frac{\nrm{f_h}_{L_h^\infty}}{8}.
+	\]
+In other words, ``$\pm \psi$" should be ``$\psi_\pm$".
+
+	\item
+Page 695, proof of Theorem 24.50. In the definition of $\tilde{\Omega}_h$ near the end of the proof, the equation
+	\[
+\tilde{\Omega}_h = \Omega_h\setminus \{(h,h),(h,Nh), (Nh,h), N,N) \}	
+	\]
+should be replaced by 
+	\[
+\tilde{\Omega}_h = \Omega_h\setminus \{(h,h),(h,Nh), (Nh,h), Nh,Nh) \}	.
+	\]
+In other words, ``$(N,N)$" should be ``$(Nh,Nh)$".
+	
+	\item
+Pages 695 and 696, proof of Theorem 24.51. Consistency error. Should use lower case $\psi$ as in the 1D proof from section 24.3.
+
+	\item
+Page 695, proof of Theorem 24.51. The last equation on the page 
+	\[
+-\Delta_h \Psi = \pm f - \nrm{f}_{L_h^\infty} \le 0	
+	\]
+should read
+	\[
+-\Delta_h \Psi_{\pm} = \pm f - \nrm{f}_{L_h^\infty} \le 0.	
+	\]
+In other words, the subscript $\pm$ is missing.
+	
+	\item
+Page 696, proof of Theorem 24.51. The estimate 
+	\[
+\pm w_{i,j} \le \Psi_{i,j} \le \max_{\partial\Omega_h} \Psi \le \max_{\partial\Omega_h} w + \frac{\nrm{f}_{L_h^\infty}}{8}
+	\]
+should read
+	\[
+\pm w_{i,j} \le {\Psi_{\pm}}_{i,j} \le \max_{\partial\Omega_h} \Psi_{\pm} \le \max_{\partial\Omega_h} w + \frac{\nrm{f}_{L_h^\infty}}{8}.
+	\]
+In other words, two $\pm$ subscripts are missing.
+ 
+	\item
+Page 699, Problem 22. The dimension of space should be 1, in particular, $\Omega = (0,1)$.
 
 	\end{enumerate}
 	
