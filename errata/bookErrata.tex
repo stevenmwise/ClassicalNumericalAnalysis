@@ -740,6 +740,24 @@ Page 699, Problem 22. The dimension of space should be 1, in particular, $\Omega
 \chapter{Finite Element Methods for Elliptic Problems}
 
 	\begin{enumerate}
+	
+	\item
+Page 702, top of the page. The expression $v_n = \sum_{i=1}^n v_i \phi_i$ may cause some confusion, and it will be corrected in the next edition. In particular, the object $v_n$ on the left is in the Hilbert space $\calH$, whereas the object $v_n$ on the right is a real number, the $n^{\rm th}$ coordinate in the basis expansion.
+
+	\item
+Page 704, proof of Theorem 25.6.  The last equality 
+	\[
+\nrm{u-u_h}_{\calH} = \min_{v\in \calH_n} \nrm{u-v}_{\calH}
+	\]
+is incorrect. It should read
+	\[
+\nrm{u-u_h}_{\calH} \le  \min_{v\in \calH_n} \nrm{u-v}_{\calH} .
+	\]
+In other words, the equality should be replaced by ``$\le$". Also, the infimum is achieved, but not necessarily at $u_h$.
+	
+	\item
+Page 707, Theorem 25.15. In the second estimate, the norm $\nrm{v'-\Pi_h v'}_{L^2(I_j)}$ should be replaced by $\nrm{\left(v-\Pi_h v \right)'}_{L^2(I_j)}$
+	
 	\item
 Page 707, Theorem 25.15. Use the simpler proof from the prelim packet. Students have struggled to understand the logic of the current proof.
 	\item
