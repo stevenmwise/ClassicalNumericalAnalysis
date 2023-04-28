@@ -767,6 +767,47 @@ Page 709. The spacing is inadequate in Equation~(25.5). The line should read
 	\]
 	\end{enumerate}
 	
+	
+	\setcounter{chapter}{27}
+	
+\chapter{Finite Difference Methods for Parabolic Problems}
+	
+	\begin{enumerate}
+	\item
+Page 779, proof of Corollary 28.10. The equation 
+	\[
+(I+\tau\Delta_h) w^{k+1} = \tau f_h^{k+1} + w^k = \tilde{f}_h^{k+1}
+	\]
+has a sign error. It should read
+	\[
+(I-\tau\Delta_h) w^{k+1} = \tau f_h^{k+1} + w^k = \tilde{f}_h^{k+1}.
+	\]
+	
+	\item
+Page 779, proof of Corollary 28.10. The estimate
+	\[
+\pm w^{k+1} \le \psi_{\pm}^{k+1} \le \max_{\partial_p \mathcal{C}_h^\tau} \psi \le \nrm{u_{0,h}}_{L_h^\infty} + C\nrm{f}_{L_\tau^\infty(L_h^\infty)}
+	\]	
+is incorrect. It should read 
+	\[
+\pm w \le \psi_{\pm} \le \max_{\partial_p \mathcal{C}_h^\tau} \psi \le \nrm{u_{0,h}}_{L_h^\infty} + C\nrm{f}_{L_\tau^\infty(L_h^\infty)}.
+	\]	
+In other words, the superscripts ${k+1}$ are unnecessary.
+
+	\item
+Page 783, Remark 28.15. The first line of the estimate 
+	\[
+(1+\mu) \, |w_i^{k+1}| = |1-\mu| \, |w_i^k| + \frac{\mu}{2} | w_{i-1}^{k+1}| + \frac{\mu}{2} |w_{i+1}^{k+1}| + \frac{\mu}{2} | w_{i-1}^k| + \frac{\mu}{2} |w_{i+1}^k| 	
+	\]
+is incorrect. It should read 
+	\[
+(1+\mu) \, |w_i^{k+1}| \le  |1-\mu| \, |w_i^k| + \frac{\mu}{2} | w_{i-1}^{k+1}| + \frac{\mu}{2} |w_{i+1}^{k+1}| + \frac{\mu}{2} | w_{i-1}^k| + \frac{\mu}{2} |w_{i+1}^k| 	.
+	\]
+In other words, the equal sign should be $\le$ after application of the triangle inequality.
+
+	\end{enumerate}
+	
+	
 	\appendix
 	
 	\setcounter{chapter}{1}
