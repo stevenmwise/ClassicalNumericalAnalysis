@@ -526,6 +526,18 @@ In other words, the lower limit of the integral should be $-1$, not 0.
 Page 510, Definition 17.4. The fragment ``for all $t\in I$ and for all $\bfv_1, \bfv_2\in \Omega$" should be replaced with  ``for all $t\in I$ and for all $\bfv_1, \bfv_2\in \overline{\Omega}.$" In other words, the $\Omega$ should be $\overline{\Omega}$.
 
 	\item
+Page 511, Theorem 17.5. The value of $\delta_1$ is incorrect. It should read
+	\[
+\delta_1 = \max\left\{\delta_0, \frac{1}{2L} , \frac{\beta}{M} \right\}.
+	\]
+	
+	\item
+Page 512, proof of Theorem 17.5. The interval $I_1$ is incorrect. It should read
+	\[
+I_1 = \left[t_0 - \frac{1}{2L} , t_0 +\frac{1}{2L} \right]\cap J	.
+	\]
+
+	\item
 Page 517, Proposition 17.11. Add to the initial hypotheses the following: ``Suppose that $S = [0,T]\times \overline\Omega$, where $\Omega \subseteq\Real^d$ is open and convex."
 
 	\item
@@ -805,6 +817,17 @@ is incorrect. It should read
 	\]
 In other words, the equal sign should be $\le$ after application of the triangle inequality.
 
+
+	\item
+Page 787, proof of Theorem 28.18, bottom third of the page. The estimate beginning with 
+	\[
+\nrm{\bfe^{k+1}}_2 \le \nrm{\msfA\bfe^n}_2 +\tau \nrm{\msfA_2\bfcalE_h^\tau[u]^{k+1}}_2
+	\]
+is incorrect. It should read
+	\[
+\nrm{\bfe^{k+1}}_2 \le \nrm{\msfA\bfe^k}_2 +\tau \nrm{\msfA_2\bfcalE_h^\tau[u]^{k+1}}_2.
+	\]
+In other words, the superscript $n$ should be changed to $k$.
 	\end{enumerate}
 	
 	
