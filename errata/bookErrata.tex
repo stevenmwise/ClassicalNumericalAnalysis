@@ -667,6 +667,17 @@ Bottom of page 589, proof of Theorem 21.17. The fragment ``for some coefficients
 	\begin{enumerate}
 	
 	\item
+Page 676, Proposition 24.20. The BDF operator notation introduced in
+  \[
+(\BDF w )_i = \frac1{2h}\left( 3w_i - 4w_{i-1} + w_{i-2} \right),
+  \]
+is incorrect and  should be changed to
+  \[
+(\BDF_2 w )_i = \frac1{2h}\left( 3w_i - 4w_{i-1} + w_{i-2} \right),
+  \]
+
+	
+	\item
 Page 683, proof of Theorem 24.30, last estimate of the proof. There are two errors. The estimate
 	\[
 0 = - h^2 \Delta v_1 = 2v_1 - v_0 - v_2 > 0	
@@ -828,8 +839,142 @@ is incorrect. It should read
 \nrm{\bfe^{k+1}}_2 \le \nrm{\msfA\bfe^k}_2 +\tau \nrm{\msfA_2\bfcalE_h^\tau[u]^{k+1}}_2.
 	\]
 In other words, the superscript $n$ should be changed to $k$.
+
+	\item
+Page 791, proof of Corollary 28.23, first line. The equation
+	\[
+\delta_\tau e^{k+1} + b \mathring\delta_h e^k - \Delta_h e^k = \calE_h^\tau[u]^k, \quad k = 1, \ldots, K,
+	\]
+in incorrect. It should be
+	\[
+\overline{\delta}_\tau e^{k+1} + b \mathring\delta_h e^k - \Delta_h e^k = \calE_h^\tau[u]^k, \quad k = 1, \ldots, K,
+	\]
+In other words, the term $\delta_\tau e^{k+1}$ should be either $\overline\delta_\tau e^{k+1}$ or $\delta_\tau e^k$.
+	
 	\end{enumerate}
 	
+	
+	\chapter{Finite difference methods for hyperbolic problems}
+	
+	\begin{enumerate}
+	
+	\item
+Page 811, Example 29.1.  The equation
+	\[
+\delta_\tau w^{k+1} + \delta_h w^k = 0.
+	\]
+is incorrect. It should be 
+  \[
+\overline{\delta}_\tau w^{k+1} + \delta_h w^k = 0.
+  \]
+In other words, $\delta_\tau w^{k+1}$ should be $\overline{\delta}_\tau w^{k+1}$.
+
+
+	\item
+Page 812, Definition 29.1. Equation (29.1),
+  \begin{equation*}
+    \begin{dcases}
+      \delta_\tau w^{k+1} + c \bar\delta_h w^k = 0, & k = 0, \ldots, K-1, \\
+      w^0 = u_{0,h};
+    \end{dcases}
+  \end{equation*}
+is incorrect. It should read
+  \begin{equation*}
+    \begin{dcases}
+\overline\delta_\tau w^{k+1} + c \bar\delta_h w^k = 0, & k = 0, \ldots, K-1, \\
+      w^0 = u_{0,h};
+    \end{dcases}
+  \end{equation*}
+  
+  	\item
+Page 812, Definition 29.1. Equation (29.2),
+  \begin{equation*}
+    \begin{dcases}
+      \delta_\tau w^{k+1} + c \mathring\delta_h w^k = 0, & k = 0, \ldots, K-1, \\
+      w^0 = u_{0,h};
+    \end{dcases}
+  \end{equation*}
+is incorrect. It should read  
+	\begin{equation*}
+    \begin{dcases}
+\overline\delta_\tau w^{k+1} + c \mathring\delta_h w^k = 0, & k = 0, \ldots, K-1, \\
+      w^0 = u_{0,h};
+    \end{dcases}
+  \end{equation*}
+  
+	\item
+Page 813, Definition 29.1. Equation (29.4),
+  \begin{equation*}
+    \begin{dcases}
+      \delta_\tau w^{k+1} + c \mathring\delta_h w^k - \frac{c^2 \tau}2 \Delta_h w^k = 0, & k = 0, \ldots, K-1, \\
+      w^0 = u_{0,h};     
+    \end{dcases}
+  \end{equation*}
+is incorrect. It should read
+  \begin{equation*}
+    \begin{dcases}
+\overline\delta_\tau w^{k+1} + c \mathring\delta_h w^k - \frac{c^2 \tau}2 \Delta_h w^k = 0, & k = 0, \ldots, K-1, \\
+      w^0 = u_{0,h};     
+    \end{dcases}
+  \end{equation*}
+  
+  \item
+Page 813, Definition 29.1. Equation (29.5),
+    \begin{equation*}
+    \begin{dcases}
+      \delta_\tau w^{k+1} + c \BDF_h w^k - \frac{c^2 \tau}2 \Delta_h w^k = 0, & k = 0, \ldots, K-1, \\
+      w^0 = u_{0,h},   
+    \end{dcases}    
+  \end{equation*}
+is incorrect. It should read
+    \begin{equation*}
+    \begin{dcases}
+\overline\delta_\tau w^{k+1} + c \BDF_2 w^k - \frac{c^2 \tau}2 \Delta_h w^k = 0, & k = 0, \ldots, K-1, \\
+      w^0 = u_{0,h}.
+    \end{dcases}    
+  \end{equation*}
+In other words, $\delta_\tau w^{k+1}$ should be $\overline\delta_\tau w^{k+1}$ and $\BDF_h w^k$ should be $\BDF_2 w^k$.
+
+	\item
+Page 813, Definition 29.1. Equation (29.6),
+  \begin{equation*}
+    \begin{dcases}
+      \delta_\tau w^{k+1} + \frac{c}2 \mathring\delta_h \left( w^{k+1} + w^k \right) = 0, & k = 0, \ldots, K-1, \\
+      w^0 = u_{0,h}.      
+    \end{dcases}    
+  \end{equation*}
+is incorrect. It should read
+  \begin{equation*}
+    \begin{dcases}
+\overline\delta_\tau w^{k+1} + \frac{c}2 \mathring\delta_h \left( w^{k+1} + w^k \right) = 0, & k = 0, \ldots, K-1, \\
+      w^0 = u_{0,h}.      
+    \end{dcases}    
+  \end{equation*}
+	
+	\item
+Page 815, Remark~29.7. The equation
+\[
+  \delta_\tau w^{k+1} + c \mathring{\delta_h} w^k - \frac{ch}2 \Delta_h w^k  =0.
+\]
+is incorrect. It should read
+\[
+\overline\delta_\tau w^{k+1} + c \mathring{\delta_h} w^k - \frac{ch}2 \Delta_h w^k  =0.
+\]
+In other words, $\delta_\tau w^{k+1}$ should be $\overline\delta_\tau w^{k+1}$.
+	
+	
+	\item
+Page 820, proof of Theorem 29.14, first line. The equation 
+\[
+  \delta_\tau w^{k+1} + c \mathring{\delta_h} w^k - \frac{ch}2 \Delta_h w^k  =0
+\]
+is incorrect. It should read 
+\[
+\overline \delta_\tau w^{k+1} + c \mathring{\delta_h} w^k - \frac{ch}2 \Delta_h w^k  =0.
+\]
+In other words, $\delta_\tau w^{k+1}$ should be $\overline\delta_\tau w^{k+1}$.
+	
+	\end{enumerate}
 	
 	\appendix
 	
