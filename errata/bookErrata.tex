@@ -150,6 +150,25 @@ Page 68, Listing 3.2. The variable {\tt denominator} is spelled four different w
 	\chapter{Norms and Matrix Conditioning}
 	
 	\begin{enumerate}
+	
+	\item
+Page 74, Proof of Theorem 4.3. The line 
+\[
+  \frac{\nrm{\msfA \bfx}_{\Complex^n}}{\nrm{\bfx}_{\Complex^n}} \leq \frac{C_2}{C_1} \frac{\nrm{\msfA \bfx}_2}{\nrm{\bfx}_2} \leq C \nrm{\msfA}_2 \leq C \sqrt{\rho(\msfA^\Ctransp\msfA)}
+\]
+should be replace by
+\[
+  \frac{\nrm{\msfA \bfx}_{\Complex^n}}{\nrm{\bfx}_{\Complex^n}} \leq \frac{C_2}{C_1} \frac{\nrm{\msfA \bfx}_2}{\nrm{\bfx}_2} \leq C \nrm{\msfA}_2 = C \sqrt{\rho(\msfA^\Ctransp\msfA)}.
+\]
+In other words, the last inequality should be an equality.
+
+	\item
+Page 78, Corollary 4.9. Punctuation/grammatical error. The statement of the corollary should read as follows: ``Let $\msfM\in\Complex^{n\times n}$, and assume that, for some induced matrix norm $\nrm{\, \cdot \,} :\Complex^{n\times n} \to \Real$,
+\[
+  \nrm{\msfM} < 1.
+\]
+Then, $\msfM$ is convergent to zero." 
+	
 	\item
 Page 80, Remark 4.15. Here we refer to the term ``ill-conditioned," but it is not defined. We say a matrix is  ill-conditioned if it has a large condition number, that is, significantly larger than 1.
 
