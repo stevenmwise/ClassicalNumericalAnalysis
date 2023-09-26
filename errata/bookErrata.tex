@@ -144,7 +144,7 @@ The subscript $\star$ was missing.
 Page 66, Problem 3.15. Add hint: ``Use the Gershgorin Circle Theorem."
 
 	\item
-Page 68, Listing 3.2. The variable {\tt denominator} is spelled four different ways.
+Page 68, Listing 3.2. The variable {\tt denominator} is spelled four different ways. The code has been corrected in the Github repo.
 	\end{enumerate}
 	
 	\chapter{Norms and Matrix Conditioning}
@@ -229,6 +229,8 @@ should read
 	\]
 In other words, there is a missing ${}^\intercal$ on $\bfy$ in the term $- \bfy\msfA^\intercal\bfr$.
 
+	\item
+Page 95, Remark 5.19. The first statement is incorrect. If $S_1$ and $S_2$ are generic orthogonal subspaces of $\Complex^n$, it is not necessarily true that $S_1\oplus S_2 = \Complex^n$. In other words, $S_1$ and $S_2$ can be orthogonal and not complementary.
 
 
 	\item
@@ -251,7 +253,44 @@ In other words, the term $\nrm{\bfe_j}$ is missing the subscript 2.
 	\item
 Pages 112--114, Lemma 5.50 and Definition 5.51. The symbol $\hat{\bfe}_1$ should be changed to $\bfe_1$. Check notational consistency throughout. Do we use $\hat{\bfe}_j$ or $\bfe_j$ for canonical basis elements.
 
+	\item
+Page 113, Definition 5.51.  Equation (5.19) 
+	\[
+  \bfa_1^{(0)} \ne  \pm e^{\mathfrak{i} \alpha_1}\nrm{\bfa_1^{(0)}}_{s^2(\Complex^m)}\widehat\bfe_1 
+	\]
+is incorrect. The subscript of the norm should be $\ell^2(\Complex^m)$ instead of $s^2(\Complex^m)$. In other words,  Equation (5.19) should read 
+	\[
+  \bfa_1^{(0)} \ne  \pm e^{\mathfrak{i} \alpha_1}\nrm{\bfa_1^{(0)}}_{\ell^2(\Complex^m)}\widehat\bfe_1 .
+	\]
+	
+	\item
+Page 119, Listing 5.1. Lines 15 and 16 are incorrect. The lines should be changed from
+	\begin{verbatim}
+15    m = size(A)(1);
+16    n = size(A)(2);	
+	\end{verbatim}
+to 
+	\begin{verbatim}
+15    m = size(A,1);
+16    n = size(A,2);	
+	\end{verbatim}
+A similar change has been made in Listing A.1. The code has been updated in the GitHub repo.
 
+	\item
+Page 120, Listing 5.2. Lines 17 and 18 are incorrect. The lines should be changed from
+	\begin{verbatim}
+17    m = size(A)(1);
+18    n = size(A)(2);	
+	\end{verbatim}
+to 
+	\begin{verbatim}
+17    m = size(A,1);
+18    n = size(A,2);	
+	\end{verbatim}
+A similar change has been made in Listing 5.1. The code has been updated in the GitHub repo.
+
+	
+	
 	\end{enumerate}
 	
 	\chapter{Linear Iterative Methods}
@@ -1000,7 +1039,23 @@ In other words, $\delta_\tau w^{k+1}$ should be $\overline\delta_\tau w^{k+1}$.
 	
 	\appendix
 	
-	\setcounter{chapter}{1}
+\chapter{Linear Algebra Review}
+
+	\begin{enumerate}
+	\item
+Page 852, Listing A.1. Lines 16 and 17 are incorrect. The lines should be changed from
+	\begin{verbatim}
+16    m = size(W)(1);
+17    n = size(W)(2);	
+	\end{verbatim}
+to 
+	\begin{verbatim}
+16    m = size(W,1);
+17    n = size(W,2);	
+	\end{verbatim}
+A similar change correction applies to Listing 5.1. The code has been updated in the GitHub repo.
+ 
+	\end{enumerate}
 	
 \chapter{Basic Analysis Review}
 

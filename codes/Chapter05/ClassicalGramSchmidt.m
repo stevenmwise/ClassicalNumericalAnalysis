@@ -13,8 +13,8 @@ function [Q, err] = ClassicalGramSchmidt( W )
 %
 % WARNING: DO NOT USE THIS CODE!!
 % The classical Gram-Schmidt process is numerically unstable
-  n = size(W)(1);
-  k = size(W)(2);
+  n = size(W,1);
+  k = size(W,2);
   Q = zeros(n,k);
   err = 0;
   if k > n
