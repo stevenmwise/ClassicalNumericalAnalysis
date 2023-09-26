@@ -25,7 +25,7 @@ function [Afact, swaps, err] = LUFactEfficient( A )
     tt = swaps(k);
     swaps(k) = swaps(i);
     swaps(i) = tt;
-    if abs( A( swaps(k), k ) <= eps( A( swaps(k), k) )
+    if abs( A( swaps(k), k ) ) <= eps( A( swaps(k), k) )
       err = 1;
       return;
     end
