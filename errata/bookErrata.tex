@@ -251,7 +251,7 @@ should read
 In other words, the term $\nrm{\bfe_j}$ is missing the subscript 2.
 
 	\item
-Pages 112--114, Lemma 5.50 and Definition 5.51. The symbol $\hat{\bfe}_1$ should be changed to $\bfe_1$. Check notational consistency throughout. Do we use $\hat{\bfe}_j$ or $\bfe_j$ for canonical basis elements.
+Pages 112--114, Lemma 5.50 and Definition 5.51. The symbol $\hat{\bfe}_1$ stands for the first canonical basis element. We have been inconsistent in this notation in the book. Be careful.
 
 	\item
 Page 113, Definition 5.51.  Equation (5.19) 
@@ -456,6 +456,20 @@ There is an errant comma.
 	\chapter{Solution of Nonlinear Equations}
 	
 	\begin{enumerate}
+	
+	\item
+Style consistence throughout the chapter. In some locations $I_\delta$ is an open interval, in others, a closed interval. The reader should be careful. A consistent usage should be established.
+	
+	\item
+Page 430, proof of Theorem 15.22, top of the page, first estimate. The last equality in the estimate should be an inequality. Specifically
+	\[
+\frac{A}{2}\cdot h\cdot |\xi-x_k| = \frac{1}{2} |\xi-x_k|,
+	\]
+should be 	
+	\[
+\frac{A}{2}\cdot h\cdot |\xi-x_k| \le  \frac{1}{2} |\xi-x_k|,
+	\]
+
 	\item
 Page 432, proof of Theorem 15.26. There is a format error 2/3 of the way down the page. The multiline equation should begin a new line with the second equals sign, and there is a missing comma. The separate line should read
 	\[
@@ -516,6 +530,13 @@ Pages 440 -- 441. All references to the $i^{\rm th}$ component of the vector $\b
 
 	\item
 Page 443, proof of Theorem 15.37. Format error. In the  multiline equation/inequality 1/3 of the way down the page, the subsequent equals signs and less than equals signs should each begin a new line. 
+
+	\item
+Page 446, problem 15.21, part (f). The limit is incorrect. It should be
+	\[
+\lim_{k\to\infty} \frac{|x_{k+1}-\xi|}{|x_k-\xi|^q} = \left| \frac{f''(\xi)}{2f'(\xi)} \right|^{1/q}.	
+	\]
+Specifically, the exponent on the right-hand-side should be $\frac{1}{q}$.
 
 	\item
 Page 448, problem 15.28. The problem steps are incorrect. They should read as follows:
