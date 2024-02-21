@@ -666,7 +666,7 @@ We will assume throughout this and the next few chapters that the slope function
 	\[
 \bff\in F^1(S), \quad  \mbox{where} \quad  S = [0,T]\times \Real^d,
 	\]
-which implies that $\bff$ is globally $\bfu$-Lipschitz continuous. This simplification guarantees the existence of a classical solution. More importantly, it allows us to apply the Lipschitz estimate, with a single constant $L$, with either the solution values or with the approximate solution values, without worrying about whether those values are in some bounded open set $\Omega$. 
+which implies that $\bff$ is globally $\bfu$-Lipschitz continuous. This simplification guarantees the existence of a classical solution. More importantly, it allows us to apply the Lipschitz estimate, with a single constant $L$, with either the solution values or with the approximate solution values, without worrying about whether those values are in some bounded open set $\Omega$. This simplifying assumption can often be lifted by proving that the true approximate solutions lie in a certain bounded set.
 	\end{rem}
 	
 	\item
@@ -674,6 +674,9 @@ Page 526, Example 18.1. The function $\bfG_{FE}$ needs no direct dependence on $
 
 	\item
 Page 530, Corollary 18.8. The words ``for some $C_{TR}>0$ that is independent of $t$ and $s$." should be replaced by ``for some $C_{TR}>0$ that is independent of $t$ and $\tau$." Specifically, $s$ should be $\tau$.
+
+	\item
+Page 531, proof of Theorem 18.9. After the application of the Gr\"{o}nwall inequality, Lemma 18.3, the estimates should be for $\nrm{\bfe^k}_2$, not $\nrm{\bfe^{k+1}}_2$. Specifically, in the last two error estimates in the proof, $\nrm{\bfe^{k+1}}_2$ should be replaced by $\nrm{\bfe^k}_2$. 
   
 	\end{enumerate}
 	
