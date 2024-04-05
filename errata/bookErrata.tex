@@ -857,16 +857,19 @@ Page 699, Problem 22. The dimension of space should be 1, in particular, $\Omega
 	\begin{enumerate}
 	
 	\item
+Page 701, just before Equation (25.1). The phase ``$\calA\colon\calH \times \calH \to \Real$ is bounded and of coercive bilinear form" has obvious grammatical errors. It should read ``$\calA\colon\calH \times \calH \to \Real$ is a bounded and coercive bilinear form".
+	
+	\item
 Page 702, top of the page. The expression $v_n = \sum_{i=1}^n v_i \phi_i$ may cause some confusion, and it will be corrected in the next edition. In particular, the object $v_n$ on the left is in the Hilbert space $\calH$, whereas the object $v_n$ on the right is a real number, the $n^{\rm th}$ coordinate in the basis expansion.
 
 	\item
 Page 704, proof of Theorem 25.6.  The last equality 
 	\[
-\nrm{u-u_h}_{\calH} = \min_{v\in \calH_n} \nrm{u-v}_{\calH}
+\nrm{u-u_h}_{\calH} = \frac{M}{\alpha}\min_{v\in \calH_n} \nrm{u-v}_{\calH}
 	\]
 is incorrect. It should read
 	\[
-\nrm{u-u_h}_{\calH} \le  \min_{v\in \calH_n} \nrm{u-v}_{\calH} .
+\nrm{u-u_h}_{\calH} \le \frac{M}{\alpha}\min_{v\in \calH_n} \nrm{u-v}_{\calH} .
 	\]
 In other words, the equality should be replaced by ``$\le$". Also, the infimum is achieved, but not necessarily at $u_h$.
 	
