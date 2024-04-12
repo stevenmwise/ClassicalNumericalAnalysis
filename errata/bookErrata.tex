@@ -863,6 +863,28 @@ Page 701, just before Equation (25.1). The phase ``$\calA\colon\calH \times \cal
 Page 702, top of the page. The expression $v_n = \sum_{i=1}^n v_i \phi_i$ may cause some confusion, and it will be corrected in the next edition. In particular, the object $v_n$ on the left is in the Hilbert space $\calH$, whereas the object $v_n$ on the right is a real number, the $n^{\rm th}$ coordinate in the basis expansion.
 
 	\item
+Page 702, proof of Lemma 25.4. The expression
+\[
+  \bfv^\intercal\msfA\bfv = \sum_{i=1}^n\sum_{j=1}^n \calA(\phi_j,\phi_i) v_i v_j = \calA(v,v) \ge \alpha\nrm{v}_{\calH}^2
+\]
+has a couple of typos. It should read
+\[
+  \bfv^\intercal\msfA\bfv = \sum_{i=1}^n\sum_{j=1}^n \calA(\phi_j,\phi_i) v_i v_j = \calA(v_n,v_n) \ge \alpha\nrm{v_n}_{\calH}^2.
+\]
+In particular, $v$ should be $v_n$.
+
+	\item
+Page 703, statement of Theorem 25.6. There is a typo in the estimate 
+\[
+  \nrm{u-u_h}_{\calH} \le \frac{M}{\alpha} \min_{v\in \calH_n}\nrm{u-v}_{\calH} .
+\]
+It should read
+\[
+  \nrm{u-u_n}_{\calH} \le \frac{M}{\alpha} \min_{v\in \calH_n}\nrm{u-v}_{\calH}.
+\]
+In particular, the symbol $u_h$ should be $u_n$.
+
+	\item
 Page 704, proof of Theorem 25.6.  The last equality 
 	\[
 \nrm{u-u_h}_{\calH} = \frac{M}{\alpha}\min_{v\in \calH_n} \nrm{u-v}_{\calH}
@@ -871,13 +893,36 @@ is incorrect. It should read
 	\[
 \nrm{u-u_h}_{\calH} \le \frac{M}{\alpha}\min_{v\in \calH_n} \nrm{u-v}_{\calH} .
 	\]
-In other words, the equality should be replaced by ``$\le$". Also, the infimum is achieved, but not necessarily at $u_h$.
+In other words, the equality should be replaced by ``$\le$". Also, the infimum is achieved, but not necessarily at $u_n$.
+
+	\item
+Page 704, Remark 25.7. There is a typo in the statement of the best approximation property
+\[
+  \nrm{u-u_h}_E = \min_{v\in \calH}\nrm{u-v}_E.
+\]
+It should read
+\[
+  \nrm{u-u_n}_E = \min_{v\in \calH_n}\nrm{u-v}_E.
+\]
+In particular, $u_h$ should be $u_n$ and $\calH$ should be $\calH_n$.
 	
 	\item
 Page 707, Theorem 25.15. In the second estimate, the norm $\nrm{v'-\Pi_h v'}_{L^2(I_j)}$ should be replaced by $\nrm{\left(v-\Pi_h v \right)'}_{L^2(I_j)}$
 	
 	\item
 Page 707, Theorem 25.15. Use the simpler proof from the prelim packet. Students have struggled to understand the logic of the current proof.
+	
+	\item
+Page 709. Proof of Corollary 25.17. There is a typo in the first estimate of the proof, 
+	\[
+  \| u - u_h \|_{H^1_0(0,1)} \leq C \inf_{v_h \in \Space^1_0(\Triang_h)} \| u - v_h \|_{H^1_0(0,1)} \leq C \| u - \Pi_hu \|_{H^1_0(0,1)} .
+\]
+It should read
+\[
+  \| u - u_h \|_{H^1_0(0,1)} \leq C \inf_{v_h \in \Space^{1,0}_0(\Triang_h)} \| u - v_h \|_{H^1_0(0,1)} \leq C \| u - \Pi_hu \|_{H^1_0(0,1)}.
+\]
+In particular, the symbol $\Space^1_0(\Triang_h)$ should be $\Space^{1,0}_0(\Triang_h)$.	
+	
 	\item
 Page 709. The spacing is inadequate in Equation~(25.5). The line should read
 	\[
@@ -921,7 +966,7 @@ is incorrect. It should read
 	\[
 (1+\mu) \, |w_i^{k+1}| \le  |1-\mu| \, |w_i^k| + \frac{\mu}{2} | w_{i-1}^{k+1}| + \frac{\mu}{2} |w_{i+1}^{k+1}| + \frac{\mu}{2} | w_{i-1}^k| + \frac{\mu}{2} |w_{i+1}^k| 	.
 	\]
-In other words, the equal sign should be $\le$ after application of the triangle inequality.
+In other words, the equal sign should be ``$\le$" after application of the triangle inequality.
 
 
 	\item
