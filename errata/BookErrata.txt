@@ -1,5 +1,0 @@
-1) Chapter 4: Problem 4.2: "induced matrix norm" should be "induced operator norm".
-
-2) Chapter 6: Problem 6.19: Needs some correction. Part (d) should add the assumption that $\rho(\msfT)\ge 1$.
-
-3) References: 38. Title should be "...vary continuously as a function ..."
