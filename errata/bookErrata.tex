@@ -459,7 +459,11 @@ should read
 There is an errant comma.
 	
 
-\item Page 224, Problem~8.3a. Notice that $C_{i,i} = D_i$, so the problem, as stated, is trivial. To make it meaningful, the display equation should read
+\item Page 224, Problem~8.3a. The definition of the Cassini ovals must be
+\[
+  C_{i,j} = \left\{ z \in \Complex \ \middle| \ |z - a_{i,i}| |z - a_{j,j} | \leq R_i R_j \right\}.
+\]
+In other words, the inequality is not strict. In addition, notice that $C_{i,i} = D_i$, so the problem, as stated, is trivial. To make it meaningful, the display equation should read
 \[
   \bigcup_{\substack{i,j=1 \\ i\neq j}}^n C_{i,j} \subseteq \bigcup_{i=1}^n D_i.
 \]
