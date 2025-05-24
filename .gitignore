@@ -1,2 +1,6 @@
 
 *.icloud
+
+.texpadtmp
+
+.DS_Store
